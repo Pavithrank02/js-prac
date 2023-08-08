@@ -13,13 +13,14 @@ let ironMan = {
 }
 /***polyfil of call function */
 //Call => it is on Function 
-Function.prototype.myCall = function(ironMan) {
+Function.prototype.myCall = function(ironMan, ...args) {
   console.log("hi call")
   // console.log(this)
   
   const requiredFn = this
   ironMan.requiredFn = requiredFn
-  ironMan.requiredFn()
+  ironMan.requiredFn(...args)
 }
 
-cap.petersTeam.myCall(ironMan)
+cap.petersTeam.myCall(ironMan, "thor", "loki")
+cap.petersTeam.call(ironMan, "thor", "loki")
