@@ -26,14 +26,14 @@ let ironMan = {
 // cap.petersTeam.call(ironMan, "thor", "loki")
 
 /***polyfil of apply function */
-Function.prototype.myApply = function(ironMan, args) {
-  console.log("hi apply")
-  // console.log(this)
+// Function.prototype.myApply = function(ironMan, args) {
+//   console.log("hi apply", args, ...args)
+//   // console.log(this)
   
-  const requiredFn = this
-  ironMan.requiredFn = requiredFn
-  ironMan.requiredFn(...args)
-}
+//   const requiredFn = this
+//   ironMan.requiredFn = requiredFn
+//   ironMan.requiredFn(...args)
+// }
 
-cap.petersTeam.myApply(ironMan,[ "thor", "loki"])
-cap.petersTeam.apply(ironMan, ["thor", "loki"])
+// cap.petersTeam.myApply(ironMan,[ "thor", "loki"])
+// cap.petersTeam.apply(ironMan, ["thor", "loki"])
