@@ -1,11 +1,11 @@
 /****Default parameter**** */
 
-function fn(p1, p2, p3="default") {
-  console.log("hi params are", p1, p2, p3)
-}
+// function fn(p1, p2, p3="default") {
+//   console.log("hi params are", p1, p2, p3)
+// }
 
-fn("one", "two", "three")
-fn("one", "two")
+// fn("one", "two", "three")
+// fn("one", "two")
 
 
 
@@ -29,5 +29,27 @@ fn("one", "two")
 // arr2[2][0] =200
 // console.log("contest arr", arr)
 // console.log("contest arr", arr2)
+
+
+// let a = 10
+
+// //copied value => primitive
+// let b = a;
+
+// let arr = [1,2,3,4]
+
+// let arr2 = arr
+// console.log(arr2)
+
+
+/***rest */
+
+function fn(p1, ...p2) {
+  console.log("hi params are", p1)
+  console.log("rest parameter", p2)
+}
+
+fn("one", "two", "three")
+fn("one", "two")
 
 
