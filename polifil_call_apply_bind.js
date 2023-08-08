@@ -37,3 +37,19 @@ let ironMan = {
 
 // cap.petersTeam.myApply(ironMan,[ "thor", "loki"])
 // cap.petersTeam.apply(ironMan, ["thor", "loki"])
+
+/***polyfil of bind function */
+Function.prototype.myBind = function(ironMan) {
+  
+  // console.log(this)
+  
+  const requiredFn = this
+  return function(...args) {
+    requiredFn.call(ironMan, ...args)
+  }
+}
+
+const boundFn = cap.petersTeam.myBind(ironMan)
+const func = cap.petersTeam.bind(ironMan)
+boundFn("thor", "loki")
+func("thor", "loki")
