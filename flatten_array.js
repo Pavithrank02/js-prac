@@ -20,3 +20,6 @@ function flatten(srcArr) {
 
 let flatenedArr = flatten(input)
 console.log(flatenedArr)
+
+const flattent = input.flat()
+console.log(flattent)
