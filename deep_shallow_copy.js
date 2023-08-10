@@ -14,5 +14,6 @@ let arr = [1,2,3,4,[10,12], 4, 5]
 let spreadArr = [...arr]
 
 spreadArr[2] = 100
+spreadArr[4][1] = 200
 
 console.log("sa",spreadArr, "arr",arr)
