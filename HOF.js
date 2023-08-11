@@ -104,24 +104,39 @@ function cuber(elem) {
 
 
 /***Reduce method */
-let elems = [1,2,3,4,5, 11, 12, 13];
+// let elems = [1,2,3,4,5, 11, 12, 13];
 
-function product(acc, elem) {
-  return acc * elem
-}
-function sum(acc, elem) {
-  return acc + elem
-}
-elems.reduce(product)
+// function product(acc, elem) {
+//   return acc * elem
+// }
+// function sum(acc, elem) {
+//   return acc + elem
+// }
+// elems.reduce(product)
 
-/***polyfil for Reduce method */
+// /***polyfil for Reduce method */
 
-function reducer(cb) {
-  let acc = this[0]
-  for(i = 0 ; i<this.length; i++){
-    acc = cb[acc, this[i]]
-  }
-  return acc
-}
+// function reducer(cb) {
+//   let acc = this[0]
+//   for(i = 0 ; i<this.length; i++){
+//     acc = cb[acc, this[i]]
+//   }
+//   return acc
+// }
 
 
+/****sort */
+
+let animals = [
+  'hen', 
+  'lama', 
+  'elephant', 
+  'whale',
+  'octupos',
+  'dog',
+  'frog'
+]
+
+let sortedArr = animals.sort()
+
+console.log(sortedArr)
