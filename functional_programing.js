@@ -66,14 +66,55 @@
  *            functions  can be returned 
  */
 
-  function fn() {
-    console.log("i am running")
-    return function inner() {
-      console.log("returned from fn")
-    }
-  }
+  // function fn() {
+  //   console.log("i am running")
+  //   return function inner() {
+  //     console.log("returned from fn")
+  //   }
+  // }
 
-  const retfu = fn()
-  // console.log("retun va", retfu)
-  // console.log("retun va"+retfu)
-  console.log("retun va", retfu())
+  // const retfu = fn()
+  // // console.log("retun va", retfu)
+  // // console.log("retun va"+retfu)
+  // console.log("retun va", retfu())
+
+  /***Arrays */
+
+  /**
+   * Js => arrays are collection of anything valid JS datatypes
+   * 
+   */
+
+  let arr = [
+    1,
+    1.1, 
+    true, 
+    null,
+    "string", 
+    [1,2,4],
+    {name: "pav"},
+    function fn() {
+      console.log(" i pom")
+    }
+  ]
+
+
+  // console.log("arer", arr)
+  // console.log(arr[5][2])
+
+  /***
+   * arrays are objects disguised as arrays => keys are numbers
+   */
+
+  /**
+   * traverse array
+   */
+  // for(let key in arr){
+  //   console.log("keys: ", key, "value", arr[key])
+  // }
+
+  console.log(arr[25])
+  arr[30] = 200
+  console.log("118", arr.length)
+  arr["hello"] = 599
+  console.log("120", arr.length)
