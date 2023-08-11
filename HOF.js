@@ -15,27 +15,27 @@ let arr = [2,3,4,5]
 // }
 // console.log(arr)
 
-function transformer(arr, logic) {
-  let newArr = []
-  for(let i = 0; i< arr.length; i++) {
-      let ans = logic(arr[i])
-      newArr.push(ans)
+// function transformer(arr, logic) {
+//   let newArr = []
+//   for(let i = 0; i< arr.length; i++) {
+//       let ans = logic(arr[i])
+//       newArr.push(ans)
      
-    }
-  return newArr
-}
+//     }
+//   return newArr
+// }
 
-function squarer(elem) {
-  return elem * elem
-}
-function cuber(elem) {
-  return elem * elem * elem
-}
+// function squarer(elem) {
+//   return elem * elem
+// }
+// function cuber(elem) {
+//   return elem * elem * elem
+// }
 
-const squredArr  =  transformer(arr, squarer)
-const cubedArr  =  transformer(arr, cuber)
-console.log("cubed", cubedArr)
-console.log("squred", squredArr)
+// const squredArr  =  transformer(arr, squarer)
+// const cubedArr  =  transformer(arr, cuber)
+// console.log("cubed", cubedArr)
+// console.log("squred", squredArr)
 
 /**
  * HOF => are the function that accepts functions or returns functions
@@ -48,4 +48,11 @@ console.log("squred", squredArr)
  * map
  * filter
  * reduce
+ * sort
  */
+
+/***foreach traversal=> used to traverse array */
+
+arr.forEach(function(elem){
+  console.log(elem)
+})
