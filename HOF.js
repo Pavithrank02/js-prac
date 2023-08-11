@@ -114,3 +114,14 @@ function sum(acc, elem) {
 }
 elems.reduce(product)
 
+/***polyfil for Reduce method */
+
+function reducer(cb) {
+  let acc = this[0]
+  for(i = 0 ; i<this.length; i++){
+    acc = cb[acc, this[i]]
+  }
+  return acc
+}
+
+
