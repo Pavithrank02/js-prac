@@ -2,7 +2,7 @@
  * HOF problems
  */
 
-let arr = [2,3,4,5]
+// let arr = [2,3,4,5]
 //find square of every number
 // for(let i = 0; i< arr.length; i++) {
 //   arr[i] = arr[i] * arr[i]
@@ -51,8 +51,27 @@ let arr = [2,3,4,5]
  * sort
  */
 
-/***foreach traversal=> used to traverse array */
+/***foreach traversal=> used to traverse array and it will only return value*/
 
-arr.forEach(function(elem){
-  console.log(elem)
-})
+// arr.forEach(function(elem){
+//   console.log(elem)
+// })
+
+
+/***
+ * map method => it will be changing every elem according to callback
+ * map method will return new array and doesnt change original
+ */
+let arr = [2,3,4,5]
+
+function squarer(elem) {
+  return elem * elem
+}
+function cuber(elem) {
+  return elem * elem * elem
+}
+
+let cubedArr = arr.map(cuber)
+console.log("cubed", cubedArr)
+let squredArr = arr.map(squarer)
+console.log("squred", squredArr)
