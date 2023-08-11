@@ -75,3 +75,15 @@ let cubedArr = arr.map(cuber)
 console.log("cubed", cubedArr)
 let squredArr = arr.map(squarer)
 console.log("squred", squredArr)
+
+//polyfil of map function
+
+Array.prototype.myMap = function(arr, logic) {
+  let newArr = []
+  for(let i = 0; i< arr.length; i++) {
+      let ans = logic(arr[i])
+      newArr.push(ans)
+     
+    }
+  return newArr
+}
