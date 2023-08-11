@@ -45,19 +45,35 @@
 /**variables can be passed as params
  * returned as value
  */
-function fn(params) {
-    console.log("params", params)
-    const rtfun = params()
-    console.log(" reg", rtfun)
-    return "fron outer"
+// function fn(params) {
+//     console.log("params", params)
+//     const rtfun = params()
+//     console.log(" reg", rtfun)
+//     return "fron outer"
   
-  }
+//   }
 
-  fn(smaller)
+//   fn(smaller)
 
-  function smaller () {
-    console.log(" iam smaller")
-    return "hello"
-  }
+//   function smaller () {
+//     console.log(" iam smaller")
+//     return "hello"
+//   }
   // fn([1,3,4])
   // fn({name: "pac"})
+
+  /**variables can be returned
+ *            functions  can be returned 
+ */
+
+  function fn() {
+    console.log("i am running")
+    return function inner() {
+      console.log("returned from fn")
+    }
+  }
+
+  const retfu = fn()
+  // console.log("retun va", retfu)
+  // console.log("retun va"+retfu)
+  console.log("retun va", retfu())
