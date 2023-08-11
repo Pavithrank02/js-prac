@@ -93,11 +93,24 @@ function cuber(elem) {
 
 /***filter */
 
-let elems = [1,2,3,4,5];
+// let elems = [1,2,3,4,5];
 
-function isOdd(elem) {
-  return elem % 2 == 1
+// function isOdd(elem) {
+//   return elem % 2 == 1
+// }
+
+// const res = elems.filter(isOdd)
+// console.log(res)
+
+
+/***Reduce method */
+let elems = [1,2,3,4,5, 11, 12, 13];
+
+function product(acc, elem) {
+  return acc * elem
 }
+function sum(acc, elem) {
+  return acc + elem
+}
+elems.reduce(product)
 
-const res = elems.filter(isOdd)
-console.log(res)
