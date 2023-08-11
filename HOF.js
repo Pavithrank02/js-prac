@@ -75,17 +75,29 @@ function cuber(elem) {
 
 //polyfil of map function
 
-Array.prototype.myMap = function( logic) {
-  let newArr = []
-  for(let i = 0; i< arr.length; i++) {
-      let ans = logic(arr[i])
-      newArr.push(ans)
+// Array.prototype.myMap = function( logic) {
+//   let newArr = []
+//   for(let i = 0; i< arr.length; i++) {
+//       let ans = logic(arr[i])
+//       newArr.push(ans)
      
-    }
-  return newArr
+//     }
+//   return newArr
+// }
+
+// let cubedArr = arr.myMap(cuber)
+// console.log("cubed", cubedArr)
+// let squredArr = arr.myMap(squarer)
+// console.log("squred", squredArr)
+
+
+/***filter */
+
+let elems = [1,2,3,4,5];
+
+function isOdd(elem) {
+  return elem % 2 == 1
 }
 
-let cubedArr = arr.myMap(cuber)
-console.log("cubed", cubedArr)
-let squredArr = arr.myMap(squarer)
-console.log("squred", squredArr)
+const res = elems.filter(isOdd)
+console.log(res)
