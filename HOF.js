@@ -71,14 +71,11 @@ function cuber(elem) {
   return elem * elem * elem
 }
 
-let cubedArr = arr.map(cuber)
-console.log("cubed", cubedArr)
-let squredArr = arr.map(squarer)
-console.log("squred", squredArr)
+
 
 //polyfil of map function
 
-Array.prototype.myMap = function(arr, logic) {
+Array.prototype.myMap = function( logic) {
   let newArr = []
   for(let i = 0; i< arr.length; i++) {
       let ans = logic(arr[i])
@@ -87,3 +84,8 @@ Array.prototype.myMap = function(arr, logic) {
     }
   return newArr
 }
+
+let cubedArr = arr.myMap(cuber)
+console.log("cubed", cubedArr)
+let squredArr = arr.myMap(squarer)
+console.log("squred", squredArr)
