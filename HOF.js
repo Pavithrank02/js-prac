@@ -125,7 +125,7 @@ function cuber(elem) {
 // }
 
 
-/****sort */
+/****sort => sorts are highorderfunction with alphabetical sort */
 
 let animals = [
   'hen', 
