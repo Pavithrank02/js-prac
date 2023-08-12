@@ -46,19 +46,54 @@
 // console.log(c1())
 // console.log(c2())
 
-function getFirstName(firstname) {
-  console.log("O have got your firstname")
-  return function getLastname(lastname){
-    console.log(" i have got your second name")
-    return function greeting(){
-      console.log(`${firstname} ${lastname}`)
-    }
+// function getFirstName(firstname) {
+//   console.log("O have got your firstname")
+//   return function getLastname(lastname){
+//     console.log(" i have got your second name")
+//     return function greeting(){
+//       console.log(`${firstname} ${lastname}`)
+//     }
+//   }
+// }
+
+// const fnNmeR = getFirstName("pavi")
+// // console.log(fnNmeR)
+
+// const laNmeR = fnNmeR("tgf")
+// // console.log(laNmeR)
+// laNmeR()
+
+// function outer() {
+//   let arrFn = []
+//   for (var i = 0; i< 3 ; i++) {
+//     arrFn.push(function fn(){
+//       console.log(i)
+//     })
+
+//   }
+//   return arrFn
+// }
+
+// let arrFn = outer()
+
+// arrFn[0]()
+// arrFn[1]()
+// arrFn[2]()
+// arrFn[2]()
+
+function outer() {
+  let arrFn = []
+  for (let i = 0; i< 3 ; i++) {
+    arrFn.push(function fn(){
+      console.log(i)
+    })
+
   }
+  return arrFn
 }
 
-const fnNmeR = getFirstName("pavi")
-// console.log(fnNmeR)
+let arrFn = outer()
 
-const laNmeR = fnNmeR("tgf")
-// console.log(laNmeR)
-laNmeR()
+arrFn[0]()
+arrFn[1]()
+arrFn[2]()
