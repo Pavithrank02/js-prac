@@ -61,4 +61,33 @@
 // const stack = createEvenStack()
 
 // stack.push(10)
-// stack.push(1)
+// stack.push(1):
+function calc(n) {
+  let sum = 0
+  for(let i = 0; i<n; i++){
+    sum+=n
+  }
+  return sum
+}
+function memoise(fn) {
+  let cache = []
+  return function fn(n){
+    let istheInputPresent = Object.keys(cache).includes(n)
+    if(istheInputPresent){
+      return cache[n]
+      
+    }else {
+      const result = fn[n]
+      cache[n]= result
+      return result
+    }
+  }
+}
+
+let efficientCalFn = memoise(calc)
+console.time()
+efficientCalFn(5)
+console.timeEnd()
+console.time()
+efficientCalFn(10)
+console.timeEnd()
