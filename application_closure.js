@@ -15,23 +15,50 @@
 //   // console.log(laNmeR)
 //   leu()
 
-function counter(args) {
-  let count = 0
-  count++
-  if (args == 0) {
-    return count
-  } else {
-    return function inner(args) {
-      count++
-      if (args == 0) {
-        return count
-      } else {
-        return inner
-      }
-    }
-  }
-}
-//infinite curring
-console.log(counter(0))
-console.log(counter()(0))
-console.log(counter()()()()(0))
+// function counter(args) {
+//   let count = 0
+//   count++
+//   if (args == 0) {
+//     return count
+//   } else {
+//     return function inner(args) {
+//       count++
+//       if (args == 0) {
+//         return count
+//       } else {
+//         return inner
+//       }
+//     }
+//   }
+// }
+// //infinite curring
+// console.log(counter(0))
+// console.log(counter()(0))
+// console.log(counter()()()()(0))
+
+/***
+ * memoisation
+ * create private function
+ */
+
+// function createEvenStack () {
+//   return {
+//     items: [],
+//     push(item) {
+//       if(item% 2 ==0){
+//         console.log("is pushed")
+//         this.items.push(item)
+//       } else{
+//         console.log("even value please")
+//       }
+//     }, 
+//     pop(){
+//       return this.items.pop()
+//     }
+//   }
+// }
+
+// const stack = createEvenStack()
+
+// stack.push(10)
+// stack.push(1)
