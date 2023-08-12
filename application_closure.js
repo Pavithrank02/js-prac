@@ -31,7 +31,7 @@ function counter(args) {
     }
   }
 }
-
+//infinite curring
 console.log(counter(0))
 console.log(counter()(0))
 console.log(counter()()()()(0))
