@@ -69,25 +69,25 @@ function calc(n) {
   }
   return sum
 }
-function memoise(fn) {
-  let cache = []
-  return function fn(n){
-    let istheInputPresent = Object.keys(cache).includes(n)
-    if(istheInputPresent){
-      return cache[n]
+// function memoise(fn) {
+//   let cache = []
+//   return function fn(n){
+//     let istheInputPresent = Object.keys(cache).includes(n)
+//     if(istheInputPresent){
+//       return cache[n]
       
-    }else {
-      const result = fn[n]
-      cache[n]= result
-      return result
-    }
-  }
-}
+//     }else {
+//       const result = fn[n]
+//       cache[n]= result
+//       return result
+//     }
+//   }
+// }
 
-let efficientCalFn = memoise(calc)
-console.time()
-efficientCalFn(5)
-console.timeEnd()
-console.time()
-efficientCalFn(10)
-console.timeEnd()
+// let efficientCalFn = memoise(calc)
+// console.time()
+// efficientCalFn(5)
+// console.timeEnd()
+// console.time()
+// efficientCalFn(10)
+// console.timeEnd()
