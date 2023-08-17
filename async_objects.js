@@ -33,13 +33,13 @@
  * create polyfil of setInterval
  */
 
-function mysetInterval(cb, delay){
+function mysetInterval(cb, delay) {
   let obj = {
-    flag : true
+    flag: true
   }
 
-  function myFn(){
-    if(obj.flag == true){
+  function myFn() {
+    if (obj.flag == true) {
       cb()
       setTimeout(myFn, delay)
     }
@@ -50,16 +50,16 @@ function mysetInterval(cb, delay){
 }
 
 function clearMyInterval(obj) {
-    obj.flag = false
+  obj.flag = false
 }
 
-function cb(){
+function cb() {
   console.log('callback')
 }
 
 let obj = mysetInterval(cb, 1000)
 
-function clearCb(){
+function clearCb() {
   console.log("cancelled the cb")
   clearMyInterval(obj)
 }
