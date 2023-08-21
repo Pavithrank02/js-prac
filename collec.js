@@ -32,11 +32,11 @@
   
   console.log(c instanceof b)
   
-  // for (var i = 0; i < 3; i++) {
-  //     setTimeout(function log() {
-  //         console.log(i); // What is logged?
-  //     }, 1000);
-  // }
+  for (var i = 0; i < 3; i++) {
+      setTimeout(function log() {
+          console.log(i); // What is logged?
+      }, 1000);
+  }
   
   
   var fruits= ["Apple", "Mango", "Banana"];
