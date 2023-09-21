@@ -97,6 +97,6 @@
 // arrFn[0]()
 // arrFn[1]()
 // arrFn[2]()
-const num = 2;
-num = 6;
-console.log(num);
+// const num = 2;
+// num = 6;
+// console.log(num);
