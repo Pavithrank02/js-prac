@@ -120,15 +120,32 @@
 // console.log('1' == true)
 // console.log(1n == true)
 // console.log(' 1     ' == true)
-console.log([] + [])
-console.log([] + 1)
-console.log([[]] + 1)
-console.log([[1]] + 1)
-console.log([[[[2]]]] + 1)
-console.log([] - 1)
-console.log([[]] - 1)
-console.log([[1]] - 1)
-console.log([[[[2]]]] - 1)
-console.log([] + {})
-console.log({} + {})
-console.log({} - {})
+// console.log([] + [])
+// console.log([] + 1)
+// console.log([[]] + 1)
+// console.log([[1]] + 1)
+// console.log([[[[2]]]] + 1)
+// console.log([] - 1)
+// console.log([[]] - 1)
+// console.log([[1]] - 1)
+// console.log([[[[2]]]] - 1)
+// console.log([] + {})
+// console.log({} + {})
+// console.log({} - {})
+
+// const promise = new Promise((resolve, reject) => {
+//   if (success) {
+//     resolve("jod")
+//   } else {
+//     reject("jhjkdsh")
+//   }
+// })
+
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error("Error fetching data:", error);
+  });

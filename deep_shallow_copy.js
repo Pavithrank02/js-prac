@@ -9,14 +9,15 @@
 
 /***shallow copy */
 
-// let arr = [1,2,3,4,[10,12], 4, 5]
+// let arr = [1, 2, 3, 4, [10, 12], 4, 5]
 
 // let spreadArr = [...arr]
 
 // spreadArr[2] = 100
 // spreadArr[4][1] = 200
 
-// console.log("sa",spreadArr, "arr",arr)
+// console.log("sa", spreadArr,)
+// console.log("arr", arr)
 
 /***deep copy */
 
@@ -26,7 +27,7 @@ let person = {
   address: {
     street: "North",
     city: " sulur",
-    state: "TN", 
+    state: "TN",
     country: " India"
   }
 };
@@ -39,5 +40,5 @@ console.log(typeof stringObject, stringObject)
 let deepClone = JSON.parse(stringObject)
 
 deepClone.secondName = " thran";
-deepClone.address.street = "south" 
+deepClone.address.street = "south"
 console.log('copiedObject', deepClone)
