@@ -4,7 +4,7 @@ const element = document.getElementById("myDiv");
 element.setAttribute("id", "newId");
 
 const element1 = document.createElement("div")
-element1.textContent = " We Ar"
+element1.innerHTML = " We Ar"
 document.body.append(element1)
 
 const newDiv = document.createElement("div");
